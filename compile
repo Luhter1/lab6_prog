@@ -1,0 +1,2 @@
+javac -d bin_server ./Server/*/*.java ./Server/*/*/*.java ./Server/*/*/*/*.java
+javac -d bin_client ./Client/*.java ./Client/*/*.java  ./Client/*/*/*.java ./Client/*/*/*/*.java

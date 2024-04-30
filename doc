@@ -1,0 +1,1 @@
+javadoc -d javadoc ./src/main.java ./src/*/*.java ./src/*/*/*.java ./src/*/*/*/*.java
