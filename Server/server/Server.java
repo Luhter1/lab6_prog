@@ -76,10 +76,24 @@ public class Server{
         
         String str;
         // должна быть реализация exit, save, connect
+        System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
         while(true){
-            System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
-            str = input.readLine();
-            CommandManager.ServerExecute(str);
+            if(input.ready()){
+                str = input.readLine();
+                CommandManager.ServerExecute(str);
+                System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
+            }else{
+                Socket socket = server.accept();
+                try{
+                    connectList.add(new Connection(socket));
+                }catch(IOException e){
+                    System.out.println(e);
+                }finally{
+                    socket.close();
+                }
+            }
+            //System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
+
             //this.connecting();
         }
         //server.close();
@@ -89,13 +103,15 @@ public class Server{
 
     public static void connecting() throws IOException{
         System.out.println("Ожидание установления соединения с клиентом");
-        Socket socket = server.accept();
-        try{
-            connectList.add(new Connection(socket));
-        }catch(IOException e){
-            System.out.println(e);
-        }finally{
-            socket.close();
+        while(true){
+            Socket socket = server.accept();
+            try{
+                connectList.add(new Connection(socket));
+            }catch(IOException e){
+                System.out.println(e);
+            }finally{
+                socket.close();
+            }
         }
     }
     // получаем команды из client

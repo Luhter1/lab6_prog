@@ -34,7 +34,7 @@ public class CommandManager{
         new SaveServerCommand(), //
         new ExitServerCommand(), //
         new HelpServerCommand(), //
-        new ConnectServerCommand() //
+        //new ConnectServerCommand() //
     };
 
     /**

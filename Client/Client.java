@@ -31,7 +31,13 @@ public class Client{
                 
     */
     public static void main(String[] args){
+        System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+        while(true){
+            Main();
+        }
+    }
 
+    public static void Main(){
         try {
 
             try {
@@ -39,7 +45,7 @@ public class Client{
                 out = new ObjectOutputStream(socket.getOutputStream());
                 in = new ObjectInputStream(socket.getInputStream());
 
-                System.out.println("Соединение с сервером успешно");
+                //System.out.println("Соединение с сервером успешно");
                 // если соединение произошло и потоки успешно созданы
                 // - предложить клиенту что то ввести
                 // если нет - вылетит исключение
@@ -55,8 +61,8 @@ public class Client{
                 String[] command;
                 String serverWord;
 
-                while(true){
-                    System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+
+
 
                     word = input.readLine();
 
@@ -91,14 +97,15 @@ public class Client{
                             }catch(ClassNotFoundException er){System.out.println(er);}
                         }
 
-                        if(command[0].equals("exit")) break;
-                        else if(command[0].equals("execute_script")) break;
+                        //if(command[0].equals("exit")) break;
+                        //else if(command[0].equals("execute_script")) break;
                     }else{
                         System.out.println("Command not found\n");    
                     }
-                }    
+   
             } finally { // в любом случае необходимо закрыть сокет и потоки
-                System.out.println("Клиент был закрыт...");
+                //System.out.println("Клиент был закрыт...");
+                System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
                 socket.close();
                 in.close();
                 out.close();

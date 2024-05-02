@@ -20,23 +20,26 @@ public record Connection(Socket socket, ObjectInputStream in, ObjectOutputStream
     private void run() throws IOException{
         VectorCollection collection = new VectorCollection();
         try {
-            System.out.println("Соединение установлено");
-            out.writeObject(CommandManager.getPackArg());
-            while (true) {
-                try{
-                    Package word = (Package)in.readObject();
-  
-                    out.writeObject(CommandManager.execute(word, collection));    
-  
-                    if(word.equals("exit")) break;
-                
-                }catch(ClassNotFoundException er){
-                    System.out.println(er);
-                }
+            //System.out.println("Соединение установлено");
+
+            try{
+                out.writeObject(CommandManager.getPackArg());
+
+                Package word = (Package)in.readObject();
+
+                out.writeObject(CommandManager.execute(word, collection));    
+
+
+            
+            }catch(ClassNotFoundException er){
+                System.out.println(er);
             }
 
+
         }catch(EOFException er){
-            System.out.println("Соединение закрыто клиентом");
+            
+        }finally{
+            //System.out.println("Соединение закрыто");
         }
         /*
         do {// gthtytcnb exit to command and clear too
