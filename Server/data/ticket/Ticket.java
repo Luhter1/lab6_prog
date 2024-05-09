@@ -50,7 +50,7 @@ public record Ticket (Long id, String name, Coordinates coordinates, Date creati
     }
 
     public Ticket(long id, Ticket ticket){
-        this(id, ticket.name(), ticket.coordinates(), ticket.creationDate(), ticket.price(), ticket.type(), ticket.venue());
+        this(id, ticket.name(), ticket.coordinates(), ticket.creationDate(), ticket.price(), ticket.type(), (ticket.venue()!=null) ? new Venue(ticket.venue()) : null);
     }
 
     /**

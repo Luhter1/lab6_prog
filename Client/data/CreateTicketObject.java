@@ -12,7 +12,7 @@ import data.venue.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import client.Client;
-import java.util.Arrays;
+import java.util.*;
 
 /** 
  * Класс, отвечающий за создание обьектов типа {@link data.ticket.Ticket}.
@@ -20,21 +20,7 @@ import java.util.Arrays;
  * @version 1.0
 */
 public class CreateTicketObject{
-
-    /* обработка нужна, так как значения считываются из файла, можно изменить файл
-    ++ id (unique, not null, >0)
-    ++ name (not null, not empty)
-    ++ coord (not null, parse error) - так как состоит из 2 координат, не нужно проверять их, просто парсить
-    ++ date (not null)
-    ++ price (might be null, >0)
-    ++ type (not null)
-    ++ venue_id (>0, unique)
-    ++ venue_name (not null, not empty)
-    ++ venue_capacity (might be null, >0)
-    ++ venue_type (might be null)
-    */
-
-
+    private static ArrayDeque<String> script = Client.getScript();
      /** 
      * Нужен для генерации одного из полей обьекта типа {@link data.ticket.Ticket} пользователем.
      * <p>
@@ -145,8 +131,8 @@ public class CreateTicketObject{
         Coordinates coord;
         boolean first_script = false;
         if(isScript){
-            x = "";//VectorCollection.scriptQueue.pop();
-            y = "";//VectorCollection.scriptQueue.pop();
+            x = script.pop();
+            y = script.pop();
             System.out.print("\nInputed x: " + x);
             System.out.println("\nInputed y: " + y);
             first_script = true;
@@ -187,7 +173,7 @@ public class CreateTicketObject{
         String Stype=null;
 
         if(isScript){
-            Stype = "";//VectorCollection.scriptQueue.pop();
+            Stype = script.pop();
             System.out.println("\nInputed Ticket type: " + Stype);
             first_script = true;
         }
@@ -266,7 +252,7 @@ public class CreateTicketObject{
         String ans=null;
         boolean first_script=false;
         if(isScript){
-            ans = "";//VectorCollection.scriptQueue.pop();
+            ans = script.pop();
             first_script = true;
         }
         while(true){
@@ -315,7 +301,7 @@ public class CreateTicketObject{
         // venue name generation
         if(isScript){
             first_script = true;
-            name = "";//VectorCollection.scriptQueue.pop();
+            name = script.pop();
             System.out.println("\nInputed venue name: "+ name);    
         }
         while(true){
@@ -337,7 +323,7 @@ public class CreateTicketObject{
         String Scap=null;
         if(isScript){
             first_script = true;
-            Scap = "";//VectorCollection.scriptQueue.pop();
+            Scap = script.pop();
             System.out.println("\nInputed venue capacity: "+ Scap);    
         }
         while(true){
@@ -358,7 +344,7 @@ public class CreateTicketObject{
         String line=null;
         if(isScript){
             first_script = true;
-            line = "";//VectorCollection.scriptQueue.pop();
+            line = script.pop();
             System.out.println("\nInputed venue type: "+ line);    
         }
         while(true){

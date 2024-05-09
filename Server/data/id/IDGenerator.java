@@ -103,14 +103,16 @@ public class IDGenerator{
      *         под индексом 1 указывает нужно ли отсортировать коллекцию
     */
     public static long[] currentIdT(){
+
         if(currentTID==1 && !idT.isEmpty()){
             currentTID = maxE(idT);
         }
 
-        if(!idT.isEmpty()&&currentTID/2>=idT.size()){
+        if(idT.size()>1&&currentTID/2>=idT.size()){
             long[] isSort =  {randId(idT, currentTID, IDGenerator::addIdT), 1};
             return isSort;
         }
+
         addIdT(currentTID);
         long[] isSort = {currentTID++, 0};
         return isSort;
@@ -131,7 +133,7 @@ public class IDGenerator{
             currentVID = maxE(idV);
         }
 
-        if(!idV.isEmpty()&&currentVID/2>=idV.size()){
+        if(idV.size()>1&&currentVID/2>=idV.size()){
             return randId(idV, currentVID, IDGenerator::addIdV);
         }
         addIdV(currentVID);

@@ -2,12 +2,15 @@ package server;
 
 import invoker.CommandManager;
 import receiver.VectorCollection;
-import java.io.*;
 import read.ReadCSV;
 import server.Connection;
+
+import java.io.*;
 import java.net.*;
 import java.util.LinkedList;
-
+import java.util.logging.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /** 
  * Класс отвечающий за создание обьектов команды, настройку их получателей и связывание с вызывающим.
@@ -15,25 +18,55 @@ import java.util.LinkedList;
  * @version 1.0
 */
 public class Server{
-    private static int port = 1111;
+    private static int port = 1100;
     private static ServerSocket server;
-    private static LinkedList<Connection> connectList = new LinkedList<>();
     private static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-    
+    private static String name = Server.class.getName();
+    private static Logger log = Logger.getLogger(name);
+
+    //Настройка логгирования
+    static{
+        try{
+            LogManager.getLogManager().readConfiguration(
+                Server.class.getResourceAsStream("../logging.properties")
+            );
+        }catch(IOException|ExceptionInInitializerError e){
+            System.out.println("\nНе удается получить конфигурацию для логгирования\n");
+            System.exit(0);
+        }
+        log.setUseParentHandlers(false);
+
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        String date = simpleDateFormat.format(new Date());
+        try{
+            FileHandler fh = new FileHandler("./Log/log"+date+".log", true);
+            log.addHandler(fh);
+        }catch(IOException e){
+            System.out.println("\nНе удается создать файл для логгирования\n");
+            System.exit(0);
+        }
+    }
 
     public static void main(String[] args){
-            
-            String path = System.getenv("LAB5FILE");
-          
-            if(path==null){
-                System.out.println("\u001B[31m\nError: \u001B[0m переменая окружения не обнаружена\n");
-                System.exit(0);
-            }
-           
+            String method = "main";
+
             try{
+                log.logp(Level.INFO, name, method, "запуск сервера");
+
+                String path = System.getenv("LAB5FILE");
+              
+                if(path==null){
+                    throw new EnvError();
+                }
+
+                log.logp(Level.FINE, name, method, "переменая окружения получена");        
+
+            
                 new Server().start(path);
             }catch(IOException e){
-                e.printStackTrace();
+                System.out.println("\u001B[31m\nError: \u001B[0m "+e+"\n");
+                log.throwing(name, method, e);
             }
     }  
 
@@ -60,62 +93,63 @@ public class Server{
      *                       
      */
     public void start(String path) throws IOException{
-        new VectorCollection(path); //создает коллекцию для хранения и генератор id (пока нулевой)    
-        new CommandManager();
+        String method = "start";        
+
+        new VectorCollection(path, log); //создает коллекцию для хранения и генератор id (пока нулевой)    
+        new CommandManager(log);
         try{
             
             ReadCSV.read(path);
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             System.out.println("\u001B[32m" + "The collection has been read, all data is correct");
+
+            log.logp(Level.FINE, name, method, "коллекция считана");        
             System.out.println("Server is running...\n" +  "\u001B[0m");
+            log.logp(Level.FINE, name, method, "сервер запущен");        
             VectorCollection.sort();
         }catch(IOException e){
-            System.out.println("\u001B[31mКоллекция не была загружена\u001B[0m\n\nНовые значения будут сохраняться в файле:\n    "+path);
+
+            log.logp(Level.WARNING, name, method, "коллекция не найдена");
+            log.logp(Level.INFO, name, method, "новые значения сохраняются в "+path);        
+
+            System.out.println("\u001B[31mКоллекция не была загружена\u001B[0m\n\nНовые значения будут сохраняться в файле:\n    "+path+"\n");
+
         }
         
         server = new ServerSocket(port);
-        
+        server.setSoTimeout(1000);
+
         String str;
-        // должна быть реализация exit, save, connect
+        Socket socket=null;
         System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
+
         while(true){
+
             if(input.ready()){
                 str = input.readLine();
                 CommandManager.ServerExecute(str);
                 System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
             }else{
-                Socket socket = server.accept();
+                
                 try{
-                    connectList.add(new Connection(socket));
+                    socket = server.accept();
+                    new Connection(socket, log);
+                }catch(SocketTimeoutException e){
+                    continue;
                 }catch(IOException e){
                     System.out.println(e);
-                }finally{
                     socket.close();
                 }
-            }
-            //System.out.print("\u001B[33m" + "Entry server command: " +"\u001B[0m");
 
-            //this.connecting();
+            }
+
         }
-        //server.close();
+        
   
     }
 
-
-    public static void connecting() throws IOException{
-        System.out.println("Ожидание установления соединения с клиентом");
-        while(true){
-            Socket socket = server.accept();
-            try{
-                connectList.add(new Connection(socket));
-            }catch(IOException e){
-                System.out.println(e);
-            }finally{
-                socket.close();
-            }
-        }
+    public static ServerSocket getServer(){
+        return server;
     }
-    // получаем команды из client
-    // передаем строку коммандному менеджеру
-    // он определяет команду и вызывает ее
-    // она в свою очередь выполняется
 }

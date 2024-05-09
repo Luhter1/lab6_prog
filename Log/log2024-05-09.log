@@ -1,0 +1,7 @@
+May 09, 2024 8:37:23 PM server.Server main
+INFO: запуск сервера
+May 09, 2024 8:37:23 PM server.Server main
+FINER: THROW
+переменая окружения не обнаружена
+	at server.Server.main(Server.java:60)
+

@@ -61,7 +61,6 @@ public class CreateTicketObject{
         try{
             // id validation
             id =  validation.ID("ticket", args[0], true);
-
             IDGenerator.addIdT(id);
             
             // name validation
