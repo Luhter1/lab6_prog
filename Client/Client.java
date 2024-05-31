@@ -7,7 +7,8 @@ import pack.Package;
 import data.CreateTicketObject;
 import data.validation.*;
 import data.ticket.Ticket;
-
+import java.lang.StringBuilder;
+import script.Script;
 /** 
  * Класс отвечающий за создание обьектов команды, настройку их получателей и связывание с вызывающим.
  * @author Timofei Kaparulin
@@ -15,12 +16,17 @@ import data.ticket.Ticket;
 */
 public class Client{
     private static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-    private static Socket socket; //сокет для общения
+    private static ArrayDeque<String> script = new ArrayDeque<>();
+    private static ArrayDeque<String> history = new ArrayDeque<>();
+    private static LinkedHashMap<String, String> packArg;
     private static ObjectOutputStream out;
     private static ObjectInputStream in;
-    private static LinkedHashMap<String, String> packArg;
     private static Set<String> keys;
-    private static boolean Success = true;
+    private static int port = 1100;
+    private static String address = "localhost";
+    private static Socket socket;
+    private static Package pack;
+
     
     // !!!!!!!!! execute_script перенести на клиента
     /* что нужно передавать:
@@ -30,119 +36,239 @@ public class Client{
         решение: создание обьекта transfer, он содержит поле type: null, ticket, int, id
                 
     */
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
+        getArgMap();
+        System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+        CommandLoop();
+    }
 
-        try {
+    public static void getArgMap() throws IOException{
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("\u001B[35mПодключение к серверу\u001B[5;35m...\u001B[0m\n");
+        while(true){
+            try{
 
-            try {
-                socket = new Socket("localhost", 1111);
+                socket = new Socket(address, port);
                 out = new ObjectOutputStream(socket.getOutputStream());
                 in = new ObjectInputStream(socket.getInputStream());
 
-                System.out.println("Соединение с сервером успешно");
-                // если соединение произошло и потоки успешно созданы
-                // - предложить клиенту что то ввести
-                // если нет - вылетит исключение
-
-                // Получаем аргументы, для передачи
-                try{
-                    packArg = (LinkedHashMap<String, String>)in.readObject();
-                    keys = packArg.keySet();
-                }catch(ClassNotFoundException er){System.out.println(er);}
-
-                // Запускаем основной цикл
-                String word;
-                String[] command;
-                String serverWord;
-
-                while(true){
-                    System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
-
-                    word = input.readLine();
-
-                    command = word.split(" ");
-
-                    if(keys.contains(command[0])){
-
-                        switch(""+packArg.get(command[0])){
-
-                            case "null": 
-                                NullOut(command);
-                                break;
-
-                            case "int": 
-                                IntOut(command);
-                                break;
-
-                            case "id": 
-                                IdOut(command);
-                                break;
-
-                            case "ticket": 
-                                TicketOut(command);
-                                break;
-                        }
-                        // отправляем сообщение на сервер
-
-                        if(Success){
-                            try{
-                                serverWord = (String)in.readObject(); // ждём, что скажет сервер
-                                System.out.println(serverWord); // получив - выводим на экран
-                            }catch(ClassNotFoundException er){System.out.println(er);}
-                        }
-
-                        if(command[0].equals("exit")) break;
-                        else if(command[0].equals("execute_script")) break;
-                    }else{
-                        System.out.println("Command not found\n");    
-                    }
-                }    
-            } finally { // в любом случае необходимо закрыть сокет и потоки
-                System.out.println("Клиент был закрыт...");
-                socket.close();
+                out.writeObject("args");
+                out.flush();
+                
+                packArg = (LinkedHashMap<String, String>)in.readObject();
+                keys = packArg.keySet();
+                
+                
                 in.close();
                 out.close();
+                socket.close();
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.out.println("\u001B[32mСоединение установлено\u001B[0m\n");
+                while(input.ready()) input.readLine();
+                break;
+
+            }catch(ConnectException er){
+
+            }catch(ClassNotFoundException er){
+                System.out.println(er);
             }
-        } catch (IOException e) {
-            System.err.println(e);
         }
+    }
+
+    public static void CommandLoop() throws IOException{
+        String line=null;
+
+        //System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+        while(true){
+            
+            if(script.size()>0){
+                line = script.pop();
+                System.out.println(line);
+                if(Execute(line, true)){break;}
+            }else if(input.ready()){
+                line = input.readLine();
+                if(Execute(line, false)){break;}
+            }
+            
+            
+        }
+
   
     }
 
-    public static void NullOut(String[] command) throws IOException{
-        out.writeObject(new Package<String>(command[0], null));
-        out.flush(); 
-        Success = true;      
+    public static boolean Execute(String line, boolean isScript) throws IOException{
+
+        String[] command;
+        boolean Success = false;   
+
+        while(true){
+            command = line.split(" ");
+
+            if(command[0].equals("exit")){
+                
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+                System.out.println("\n\033[0;34mTerminating client...\033[0m");
+                
+                return true;
+
+            }else if(command[0].equals("execute_script")){
+                
+                Script.ExecuteScript(command[1]);
+
+                History(command[0]);
+
+                break;
+
+            }else if(command[0].equals("history")){
+
+                HistoryToString();
+
+                History(command[0]);
+
+                break;
+
+            }else if(keys.contains(command[0])){
+
+                History(command[0]);
+
+                switch(""+packArg.get(command[0])){
+
+                        case "null": 
+                            Success = NullOut(command);
+                            break;
+
+                        case "int": 
+                            Success = IntOut(command, isScript);
+                            break;
+
+                        case "id": 
+                            Success = IdOut(command, isScript);
+                            break;
+
+                        case "ticket": 
+                            Success = TicketOut(command, isScript);
+                            break;
+                }
+
+                if(Success){
+                    Send();
+
+                }
+
+                break;
+
+            }else{
+                System.out.print("\u001B[31m\n  Command not found");
+
+                if(!isScript){
+                    System.out.println("\u001B[0m\n");
+                    break;
+                }else{
+                    System.out.println(", try again\u001B[0m\n");
+                    System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+                    try{line = input.readLine();}catch(IOException ex){}
+                }    
+            }
+
+            
+
+        }
+
+        System.out.print("\u001B[33m" + "Entry command: " +"\u001B[0m");
+
+        return false;
+
     }
 
-    public static void IntOut(String[] command) throws IOException{
+    public static void Send() throws IOException{
+        try{
+
+            socket = new Socket(address, port);
+            out = new ObjectOutputStream(socket.getOutputStream());
+            in = new ObjectInputStream(socket.getInputStream());
+
+            out.writeObject(pack);
+            out.flush();
+            
+            System.out.println((String)in.readObject()); // ждем сервер
+
+            in.close();
+            out.close();
+            socket.close();
+
+        }catch(ConnectException er){
+            System.out.println("\n\u001B[0;30;47mСервер временно не доступен\u001B[0m\n");
+        }catch(SocketException er){
+            script = new ArrayDeque<>();
+            while(input.ready()) input.readLine();
+            System.out.println("\n\u001B[0;31;47mСоединение с сервером потеряно\u001B[0m\n");
+        }catch(ClassNotFoundException er){
+            System.out.println(er);
+        }
+
+    }
+
+    public static void HistoryToString(){
+    
+        Iterator<String> HistoryIter = history.descendingIterator();
+        int num = 1;
+        StringBuilder builder = new StringBuilder();
+        builder.append("\nHistory of command (from the latest):\n");
+        while(HistoryIter.hasNext()){
+            builder.append("   "+num++ +")"+HistoryIter.next()+"\n");
+        }
+        System.out.println(builder.toString());
+
+    }
+
+    public static void History(String command){
+        if(history.size()==5) history.removeLast();
+        history.push(command);
+    }
+
+    public static boolean NullOut(String[] command){
+        pack = new Package<String>(command[0], null);
+
+        return true;      
+    }
+
+    public static boolean IntOut(String[] command, boolean isScript){
         String Snum;
 
-        if(command.length==1){
+        if(isScript){
+            Snum = script.pop();
+        }else if(command.length==1){
             Snum = "0";
         }else{
             Snum = command[1];            
         }
 
         Integer price = CreateTicketObject.priceGenerate(Snum); 
-        out.writeObject(new Package<Integer>(command[0], price));
-        out.flush();
-        Success = true;   
+
+        pack = new Package<Integer>(command[0], price);
+
+        return true;   
     }
 
-    public static void IdOut(String[] command) throws IOException{
+    public static boolean IdOut(String[] command, boolean isScript){
         String Snum;
 
-        if(command.length==1){
+        if(isScript){
+            Snum = script.pop();
+        }else if(command.length==1){
             Snum = "null";
         }else{
             Snum = command[1];            
         }
 
         Long id = CreateTicketObject.idGenerate(Snum); 
-        out.writeObject(new Package<Long>(command[0], id));
-        out.flush();
-        Success = true;   
+
+        pack = new Package<Long>(command[0], id);
+
+        return true;   
     }
     //id, price, name
     //price, name
@@ -151,61 +277,50 @@ public class Client{
     price - >0
     name - not null, not ""
     */
-    public static void TicketOut(String[] command) throws IOException{
-        Ticket tic;        
+    public static boolean TicketOut(String[] command, boolean isScript){
+        String[] GArgs;     
+   
         if(command.length==1){
-            String[] args={command[0], "", "", ""};
 
-            tic = CreateTicketObject.generate(command[0], args, false);
-            out.writeObject(new Package<Ticket>(
-                                            command[0],
-                                            tic 
-                                                ));
-            out.flush();
-            Success = true;   
+            String[] args={command[0], "", "", ""};            
+            GArgs = args;
 
         }else if(command.length==2){
-            String[] args={command[0], command[1], "", ""};
 
-            tic = CreateTicketObject.generate(command[0], args, false);
-            out.writeObject(new Package<Ticket>(
-                                            command[0],
-                                            tic 
-                                                ));
-            out.flush(); 
-            Success = true;   
+            String[] args={command[0], command[1], "", ""};  
+            GArgs = args;
 
         }else if(command.length==3){
-            String[] args={command[0], command[1], command[2], ""};
 
-            tic = CreateTicketObject.generate(command[0], args, false);
-            out.writeObject(new Package<Ticket>(
-                                            command[0],
-                                            tic 
-                                                ));
-            out.flush(); 
-            Success = true;   
+            String[] args={command[0], command[1], command[2], ""};
+            GArgs = args;  
 
         }else if(command.length==4&&(command[0].equals("update"))){
-            String[] args={command[0], command[1], command[2], command[3]};
 
-            tic = CreateTicketObject.generate(command[0], args, false);
-            out.writeObject(new Package<Ticket>(
-                                            command[0],
-                                            tic 
-                                                ));
-            out.flush(); 
-            Success = true;   
+            String[] args={command[0], command[1], command[2], command[3]};
+            GArgs = args;
 
         }else{
             System.out.println(command.length-1 + " data values are obtained, but " + (command[0].equals("update") ? 3 : 2) + " are required");
-            Success = false;
-
+            return false;
         }
+
+        Ticket tic; 
+        if(isScript){
+            tic = CreateTicketObject.generate(command[0], GArgs, true);
+        }else{ 
+            tic = CreateTicketObject.generate(command[0], GArgs, false);
+        }        
+        pack = new Package<Ticket>(command[0], tic);
+        
+        return true;
 
 
     }
 
+    public static ArrayDeque<String> getScript(){
+        return script;
+    }
     public static BufferedReader getScan(){
         return input;
     }

@@ -1,24 +1,12 @@
 package invoker.exception;
 
-import exception.MyException;
 /** 
  * Исключение, вызывающееся, если команда не существует.
  * @author Timofei Kaparulin
  * @version 1.0
 */
-public class CommandException extends MyException{
-    /**
-     * Имя не существующей команды
-    */ 
+public class CommandException extends Throwable{
     String commandName;
-
-    /**
-     * Указывает, нужно ли выводить информацию по аргументам команд, для этого исключения. 
-     * @return нужно ли выводить информацию по аргументам команд
-    */
-    public boolean NeedArgs(){
-        return true;
-    }
 
     /**
      * Создает обьект типа данного класса.
@@ -32,7 +20,7 @@ public class CommandException extends MyException{
 
     public String toString(){
 
-        return "command \"" + commandName + "\" was not found";
+        return "серверная команда \"" + commandName + "\" не найдена";
 
     }
     

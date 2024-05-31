@@ -8,6 +8,7 @@ import receiver.VectorCollection;
 import exception.MyException;
 import java.io.*;
 import pack.Package;
+import java.util.logging.*;
 
 /** 
  * Класс, отвечающий за инициирование выполнения команды.
@@ -17,33 +18,22 @@ import pack.Package;
  * @version 1.0
 */
 public class CommandManager{
-    /**
-     * Обьект, с которого считываются команды
-    */
+    private static String name = CommandManager.class.getName();
+    private static Logger log;
     private static BufferedReader Scan;
-    /**
-     * Словарь команд, ключ - значение {@link command.BaseCommand#call()} для конкретной команды
-    */
     private static LinkedHashMap<String, BaseCommand> commandlist;
     private static LinkedHashMap<String, BaseCommand> Servercommandlist;
-
-    // Какие аргументы отсылать с пакетом
     private static LinkedHashMap<String, String> packArg;
 
     private static BaseCommand[] Servercommands = {
         new SaveServerCommand(), //
         new ExitServerCommand(), //
         new HelpServerCommand(), //
-        new ConnectServerCommand() //
     };
-
-    /**
-     * Все доступные команды
-    */    
+  
     private static BaseCommand[] commands = {
         new AddCommand(), //
         new HelpCommand(), //
-        new ExitCommand(), //
         new ShowCommand(), //
         new ClearCommand(), //
         new InfoCommand(), //
@@ -54,8 +44,6 @@ public class CommandManager{
         new RemoveLower(), //
         new FilterByPrice(), //
         new PrintFieldDescendingPrice(), // 
-        new HistoryCommand(), //
-        new ExecuteScriptCommand() //
     };
 
     /**
@@ -63,7 +51,9 @@ public class CommandManager{
      * <p>
      * Ключ - значение {@link command.BaseCommand#call()} для конкретной команды
     */
-    public CommandManager(){
+    public CommandManager(Logger log){
+        this.log = log;
+
         commandlist = new LinkedHashMap<>();
         Servercommandlist = new LinkedHashMap<>();
         packArg = new LinkedHashMap<>();
@@ -91,24 +81,42 @@ public class CommandManager{
 
         String output = commandlist.get(pack.command()).execute(pack, collection);
 
-        if(collection.HistorySize()==5) collection.removeLastHistory();
-        collection.pushHistory(pack.command());
-
         return output;
     }
 
     public static void ServerExecute(String line){
+            String method = "ServerExecute";
+            String[] commandName;
 
-            String[] commandName = line.split(" ");
-            
             // обработка, если нет команды
-            try{
-                Servercommandlist.get(commandName[0]).execute(null, null);
-            }catch(NullPointerException e){
+            while(true){
 
-                    System.out.print("\u001B[31m\nError: \u001B[0m incorrect command \""+line+"\"\n\ttry again: ");
-                    try{ServerExecute(Scan.readLine());}catch(Exception er){};
-            }catch(Exception e){}
+                commandName = line.split(" ");
+
+                log.logp(Level.INFO, name, method, "ввод серверной команды: "+commandName[0]); 
+
+                try{
+                    Servercommandlist.get(commandName[0]).execute(null, null);
+
+                    log.logp(Level.FINE, name, method, "серверная команда выполнена"); 
+
+                    break;
+                }catch(NullPointerException e){
+
+                        System.out.print("\u001B[31m\nError: \u001B[0m incorrect command \""+line+"\"\n\ttry again\n\n");
+
+                        log.throwing(name, method, new CommandException(commandName[0]));
+
+                        try{
+                            line = Scan.readLine();
+                        }catch(Exception er){
+                            log.throwing(name, method, er);
+                        };
+                }catch(Exception e){
+                    log.throwing(name, method, e);        
+                }
+
+            }
 
     }
 

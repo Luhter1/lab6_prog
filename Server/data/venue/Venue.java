@@ -1,11 +1,16 @@
 package data.venue;
 
 import java.io.Serializable;
+import data.id.IDGenerator;
 /** 
  * @author Timofei Kaparulin
  * @version 1.0
 */
 public record Venue(long id, String name, Integer capacity, VenueType type) implements Serializable{
+
+    public Venue(Venue venue){
+        this(IDGenerator.currentIdV(), venue.name(), venue.capacity(), venue.type());
+    }
 
     /** 
      * Returns a string representation of this record class to be written to the collection file.

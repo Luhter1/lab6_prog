@@ -17,6 +17,7 @@ public class AddCommand implements BaseCommand{
      * @param args название команды и параметры для нее
     */
     public String execute(Package pack, VectorCollection collection){
+
         return VectorCollection.add((Ticket)pack.arg());
     }
 

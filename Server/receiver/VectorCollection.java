@@ -10,8 +10,9 @@ import data.price.Price;
 import receiver.exception.*;
 import java.io.*;
 import exception.MyException;
-import read.exception.*;
 import java.lang.StringBuilder;
+import server.Server;
+import java.util.logging.*;
 // Receiver
 
 /**
@@ -21,28 +22,13 @@ import java.lang.StringBuilder;
 * @version  1.0
 */
 public class VectorCollection{
-    /**
-    * Список, содержащий все дотупные команды
-    */
+    private static String name = VectorCollection.class.getName();
     private static ArrayList<BaseCommand> Commands = new ArrayList<BaseCommand>();
-
     private static ArrayList<BaseCommand> ServerCommands = new ArrayList<BaseCommand>();
-    /**
-    * Коллекция, содержащая все данные о билетах
-    */
     private static LinkedHashSet<Ticket> table;
-    /**
-    * Дата инициализации коллекции
-    */
     private LocalDate date;
-    /**
-    * Список, содержащий историю о последних 5-ти командах
-    */
-    private ArrayDeque<String> history;
-    /**
-    * Путь до файла-коллекции
-    */
     private static String PATH=null;
+    private static Logger log;
 
     /**
      * Инициализирует начальные данный для работы с коллекцией
@@ -55,16 +41,16 @@ public class VectorCollection{
      * </ul>
      * @param path путь до пути к файлу-коллекции
     */
-    public VectorCollection(String path){
+    public VectorCollection(String path, Logger log){
         table = new LinkedHashSet<>();
         new IDGenerator();
         new Price();
         PATH = path;
+        this.log = log;
     }
 
     public VectorCollection(){
         date = LocalDate.now();
-        history = new ArrayDeque<>(5);
     }
 
     // execute_script command end
@@ -81,38 +67,21 @@ public class VectorCollection{
      */
     public static void Save(){
         try(PrintWriter printer = new PrintWriter(new FileWriter(PATH))){
+
+            table.stream().forEach(x-> printer.println(x.toWrite()));
+            /*            
             for(Ticket t: table){
                 printer.println(t.toWrite());        
             }
+            */
             System.out.println("\n\u001B[32mCollection was succesfully saved into file\u001B[0m\n");
+
         }catch(IOException e){
-                System.out.println("Ошибка записи в файл"); 
+                System.out.println("Ошибка записи в файл");
+                log.throwing(name, "save", e); 
         } 
     }
     // save command end
-
-
-    // history command start
-    /** 
-     * Выполнение команды history.
-     * <p>
-     * <ul>
-     *   <li>Итерация по очереди команд в обратном порядке</li>
-     *   <li>Вывод последних пяти команд, где под 1 находится наиболее старая</li>
-     * </ul>
-     */
-    public String History(){
-        Iterator<String> HistoryIter = history.descendingIterator();
-        int num = 1;
-        StringBuilder builder = new StringBuilder();
-        builder.append("\nHistory of command (from the latest):\n");
-        while(HistoryIter.hasNext()){
-            builder.append(num++ +")"+HistoryIter.next()+"\n");
-        }
-        builder.append("\n");
-        return builder.toString();
-    }
-    // history command end
 
 
 
@@ -169,15 +138,9 @@ public class VectorCollection{
             return "\033[1;97m\nThere is no ticket with a value equals to the value entered\u001B[0m";
         }else{
             StringBuilder builder = new StringBuilder();
-            Iterator<Ticket> tableIter = table.iterator();
-            Ticket ticket;
-            while(tableIter.hasNext()){
-                ticket = tableIter.next();
-                if(PriceId.contains(ticket.id())){
-                    builder.append("\n"+ticket+"\n");
-                }
-            }
-            builder.append("\n");
+            
+            table.stream().filter( x -> PriceId.contains(x.id()) ).forEach(x -> builder.append("\n"+x+"\n"));
+
             return builder.toString();
         }
     }
@@ -327,9 +290,9 @@ public class VectorCollection{
     public static String show(){
         if(table.size()==0) return "\nCollection is an empty\n";
         StringBuilder builder = new StringBuilder();
-        for(Ticket i: table){
-            builder.append("\n"+i+"\n\n");
-        }
+
+        table.stream().forEach(x-> builder.append("\n"+x+"\n"));
+
         return builder.toString();
     }
     // show command end
@@ -348,7 +311,6 @@ public class VectorCollection{
             builder.append("\n\u001B[47m\u001B[30mCommand:\u001B[0m "+i.getName()+"\n");
             builder.append("  -- \033[4;37m" +  i.getDescription() + "\u001B[0m\n");
         }
-        builder.append("\n");
         return builder.toString();
     }
 
@@ -388,7 +350,7 @@ public class VectorCollection{
      * 
      */
     public static String clear(){
-        new VectorCollection(PATH);
+        new VectorCollection(PATH, log);
         return "\n\u001B[32mCollection was succesfully cleared\u001B[0m\n";
     }
     // clear command end
@@ -408,9 +370,10 @@ public class VectorCollection{
         Price.maxPrice(ticket.price());
         Price.put(ticket.price(), ticket.id());
         table.add(ticket);
+
         if(id[1]==1) VectorCollection.sort();
 
-        return "\n\u001B[Ticket was succesfully added\u001B[0m\n";
+        return "\n\u001B[32mTicket was succesfully added\u001B[0m\n";
         // вернуть, что успешно создано!!!!!!!!!!!!!!!!!!!!!!!
     }
 
@@ -428,7 +391,7 @@ public class VectorCollection{
         Price.put(ticket.price(), ticket.id());
         table.add(ticket);
         VectorCollection.sort();
-        return "\n\u001B[Ticket was succesfully added\u001B[0m\n";
+        return "\n\u001B[32mTicket was succesfully updated\u001B[0m\n";
     }
     // add and update command end
 
@@ -444,41 +407,23 @@ public class VectorCollection{
      * Завершение работы программы без сохранения коллеции в файл
      */
     public static void exit(){
-        System.out.println("\n\033[0;34mTerminating programm...\033[0m");
+        System.out.println("\n\033[0;34mTerminating server...\033[0m");
+        log.logp(Level.FINE, name, "exit", "выключение сервера"); 
+        try{Server.getServer().close();}catch(Exception e){System.out.println(e);}
         System.exit(0);
     }
     // exit command end
 
 
     // starts some non-command functions
-    /** 
-     * Возвращает размер истории комманд.
-     * @return размер истории команд     
-    */
-    public int HistorySize(){
-        return history.size();
-    }
 
-    /** 
-     * Удаление самой старой команды из истории.
-     */
-    public void removeLastHistory(){
-        history.removeLast();
-    }
-
-    /** 
-     * Добавление новой комманды.
-     * @param command имя команды     
-    */
-    public void pushHistory(String command){
-        history.push(command);
-    }
     /** 
      * Сортировка коллекции.
      */
     public static void sort(){
         table = new LinkedHashSet<Ticket>(new TreeSet<Ticket>(table));
     }
+
     /** 
      * Возвращает дату инициализации коллекции.
      * @return дата инициализаии коллекции
