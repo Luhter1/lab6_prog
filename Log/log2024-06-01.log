@@ -1,0 +1,50 @@
+Jun 01, 2024 12:05:25 AM server.Server main
+INFO: запуск сервера
+Jun 01, 2024 12:05:25 AM server.Server main
+FINE: переменая окружения получена
+Jun 01, 2024 12:05:25 AM server.Server start
+FINE: коллекция считана
+Jun 01, 2024 12:05:25 AM server.Server start
+FINE: сервер запущен
+Jun 01, 2024 12:05:28 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:28 AM server.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Jun 01, 2024 12:05:30 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:31 AM server.Connection run
+INFO: получен запрос "info" from /127.0.0.1:1100
+Jun 01, 2024 12:05:31 AM server.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Jun 01, 2024 12:05:33 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:33 AM server.Connection run
+INFO: получен запрос "help" from /127.0.0.1:1100
+Jun 01, 2024 12:05:33 AM server.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Jun 01, 2024 12:05:50 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:50 AM server.Connection run
+INFO: получен запрос "add" from /127.0.0.1:1100
+Jun 01, 2024 12:05:50 AM server.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Jun 01, 2024 12:05:53 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:53 AM server.Connection run
+INFO: получен запрос "info" from /127.0.0.1:1100
+Jun 01, 2024 12:05:53 AM server.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Jun 01, 2024 12:05:57 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:57 AM server.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Jun 01, 2024 12:05:59 AM server.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 01, 2024 12:05:59 AM server.Connection run
+INFO: получен запрос "info" from /127.0.0.1:1100
+Jun 01, 2024 12:05:59 AM server.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Jun 01, 2024 12:06:06 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Jun 01, 2024 12:06:06 AM receiver.VectorCollection exit
+FINE: выключение сервера
