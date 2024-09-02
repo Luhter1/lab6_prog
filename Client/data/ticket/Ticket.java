@@ -3,7 +3,7 @@ package data.ticket;
 import java.util.Date;
 import data.coordinates.Coordinates;
 import data.venue.Venue;
-import  java.lang.Comparable;
+import java.lang.Comparable;
 import java.text.SimpleDateFormat;
 import java.io.Serializable;
 /** 
@@ -15,38 +15,16 @@ public record Ticket (Long id, String name, Coordinates coordinates, Date creati
      * Формат, в котором представленны даты при считывании и записи в файл-коллекцию                     
      */
     public static SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd");
-
-    /**
-     * Последнее id, которое сравнивалось, то есть того обьекта, который подошел под сравнение
-    */
-    static long comparable_venue_id=0;
-
-    /**
-     * Последняя цена, которая была записана при сравнении сравнивалось, то есть цена, обьекта, который подошел под сравнение
-    */
-    static Integer lastPrice=null;
-
-    /**
-     * Возвращает id заведения для обьекта, который подошел под сравнение, используется для удаления id заведения из списка id для них
-     * @return id заведения, для удаляемого билета
-    */
-    public static long lastComparableVenueId(){
-        return comparable_venue_id;
-    }
-
-    /**
-     * Возвращает цену за билет для обьекта, который подошел под сравнение, используется для удаления id заведения из словаря цен
-     * @return цену заведения, для удаляемого билета
-    */
-    public static Integer lastPrice(){
-        return lastPrice;
-    }
     
     /**
      * Создает обьект-заглушку данного типа, который используется для удаления
     */
     private Ticket(long id){
         this(id, null, null, null, null, null, null); 
+    }
+
+    public Ticket(Long[] id, Ticket ticket){
+        this(id[0], ticket.name(), ticket.coordinates(), ticket.creationDate(), ticket.price(), ticket.type(), (ticket.venue()!=null) ? new Venue(id[1], ticket.venue()) : null);
     }
 
     /**
@@ -58,23 +36,6 @@ public record Ticket (Long id, String name, Coordinates coordinates, Date creati
     */
     public static Ticket toRemove(long id){
         return new Ticket(id);
-    }
-
-    /** 
-     * Возвращает строковое представление обьекта данного класса, для его записи в файл-коллекцию.
-     * @return строковое представление обьекта для записи в файл-коллекцию
-     *
-     * @see receiver.VectorCollection#Save()                       
-     */
-    public String toWrite(){
-        String write = id + ";" + name + ";" + coordinates.toWrite() + ";" + formater.format(creationDate) + ";" + price + ";" + type;
-
-        if(venue!=null){
-            return write+";"+venue.toWrite();
-        }else{
-            return write+";null;;;;";
-        }
-
     }
 
     /** 
@@ -108,9 +69,6 @@ public record Ticket (Long id, String name, Coordinates coordinates, Date creati
         if(this==o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ticket t = (Ticket)o;
-        if (t.venue()!=null) comparable_venue_id = t.venue().id();
-        if (t.venue()==null) comparable_venue_id = 0;
-        lastPrice = t.price();
         return o.hashCode()==this.hashCode();
     }
 }

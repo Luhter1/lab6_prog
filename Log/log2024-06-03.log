@@ -1,0 +1,134 @@
+Jun 03, 2024 4:33:28 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:35:27 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:35:46 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:35:46 AM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at database.SQLManager.<init>(SQLManager.java:22)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:36:09 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:36:09 AM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at database.SQLManager.<init>(SQLManager.java:22)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:49:45 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:49:45 AM server.Server start
+FINER: THROW
+Ошибка получения данных для подключения к БД
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:51:07 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:51:07 AM server.Server start
+FINER: THROW
+Ошибка получения данных для подключения к БД
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:51:22 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:51:22 AM server.Server start
+FINER: THROW
+Ошибка получения данных для подключения к БД
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:51:37 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:51:37 AM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at database.SQLManager.<init>(SQLManager.java:23)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:52:21 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:52:21 AM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at database.SQLManager.<init>(SQLManager.java:23)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:52:44 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:52:44 AM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:235)
+	at java.base/java.util.Properties.load(Properties.java:410)
+	at database.SQLManager.<init>(SQLManager.java:23)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:253)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 4:53:19 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 4:53:19 AM server.Server start
+FINER: THROW
+Ошибка подключения к БД
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:88)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:254)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 5:21:39 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 5:21:39 AM server.Server start
+FINER: THROW
+Ошибка подключения к БД
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:90)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:254)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 5:40:17 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 5:40:17 AM server.Server start
+FINER: THROW
+Ошибка подключения к БД
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:90)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:254)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 03, 2024 8:30:38 AM server.Server main
+INFO: запуск сервера
+Jun 03, 2024 8:30:38 AM server.Server start
+FINER: THROW
+Ошибка подключения к БД
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:91)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:248)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+

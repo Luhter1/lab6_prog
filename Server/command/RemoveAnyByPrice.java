@@ -1,8 +1,9 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
-
+import server.connect.Package;
+import java.io.IOException;
+import java.sql.SQLException;
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на удаление 1-ого обьекта по указанной цене и привязывает его к получателю, вызывая соответствующую операцию на получателе.
  * 
@@ -18,8 +19,8 @@ public class RemoveAnyByPrice implements BaseCommand{
      * @exception PositiveException не положительное значение цены
      * @exception StringParseException путстое или равное null значение
     */    
-    public String execute(Package pack, VectorCollection collection){
-        return VectorCollection.removeAnyByPrice((int)pack.arg());
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
+        return VectorCollection.removeAnyByPrice((int)pack.arg(), pack.login());
     }
 
 

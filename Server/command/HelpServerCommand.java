@@ -1,7 +1,7 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
 
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на вывод справки по доступным командам и привязывает его к получателю, вызывая соответствующую операцию на получателе.

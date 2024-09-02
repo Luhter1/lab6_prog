@@ -1,7 +1,9 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
+import java.io.IOException;
+import java.sql.SQLException;
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на удаление 1-ого обьекта по указанному id и привязывает его к получателю, вызывая соответствующую операцию на получателе.
  * 
@@ -15,8 +17,8 @@ public class RemoveByIdCommand implements BaseCommand{
      * @param args название команды и параметры для нее
      * @exception LackOfDataException вызывается при недостатке аргументов для команды
     */       
-    public String execute(Package pack, VectorCollection collection){
-        return VectorCollection.remove((long)pack.arg());
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
+        return VectorCollection.remove((long)pack.arg(), pack.login());
     }
 
     @Override

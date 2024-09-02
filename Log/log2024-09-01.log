@@ -1,0 +1,762 @@
+Sep 01, 2024 10:15:24 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 10:15:25 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 10:15:25 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 10:15:28 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:28 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:43 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:43 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:44 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:44 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:44 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:44 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:45 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:45 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:46 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:47 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:47 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 10:15:47 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 10:15:47 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:22:52 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:24:05 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:24:56 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:26:22 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:27:09 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:27:10 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:27:10 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:27:15 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: asdf
+Sep 01, 2024 11:27:15 PM invoker.CommandManager ServerExecute
+FINER: THROW
+серверная команда "asdf" не найдена
+	at invoker.CommandManager.ServerExecute(CommandManager.java:91)
+	at server.Server.start(Server.java:135)
+	at server.Server.main(Server.java:66)
+
+Sep 01, 2024 11:27:17 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 11:27:17 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:27:40 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 11:27:40 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:27:44 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Sep 01, 2024 11:27:44 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Sep 01, 2024 11:30:14 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:30:15 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:30:15 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:30:37 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:30:37 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:30:37 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:30:42 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:30:42 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:30:42 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:31:24 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:31:25 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:31:25 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:31:49 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:31:50 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:31:50 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:33:05 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:33:06 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:33:06 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:34:22 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:34:22 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:34:22 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:35:41 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:35:41 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:35:41 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:36:14 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:36:15 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:36:15 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:36:21 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 11:36:21 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:39:59 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:40:00 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:40:00 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:41:15 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:41:15 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:41:15 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:41:23 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 11:41:23 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:44:54 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:44:55 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:44:55 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:45:15 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 01, 2024 11:45:15 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 01, 2024 11:46:50 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:46:51 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:46:51 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:48:42 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:48:42 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:48:42 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:51:00 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:51:01 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:51:01 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:51:21 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:51:21 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:51:21 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:58:17 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:58:17 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:58:17 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:58:17 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:18 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:19 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:20 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:20 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:20 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:20 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:20 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:21 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:21 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:35 PM server.Server main
+INFO: запуск сервера
+Sep 01, 2024 11:58:36 PM server.Server start
+FINE: коллекция получена
+Sep 01, 2024 11:58:36 PM server.Server start
+FINE: сервер запущен
+Sep 01, 2024 11:58:38 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:38 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:38 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:38 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:38 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.close(ObjectOutputStream.java:1849)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:760)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+
+Sep 01, 2024 11:58:39 PM server.Server start
+FINER: THROW
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.ensureOpenAndConnected(NioSocketImpl.java:163)
+	at java.base/sun.nio.ch.NioSocketImpl.beginWrite(NioSocketImpl.java:362)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:407)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1899)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1844)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:736)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:758)
+	at server.connect.Connection.<init>(Connection.java:27)
+	at server.Server.start(Server.java:141)
+	at server.Server.main(Server.java:65)
+

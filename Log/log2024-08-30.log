@@ -1,0 +1,394 @@
+Aug 30, 2024 8:49:47 AM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 8:49:48 AM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 8:49:48 AM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 8:50:00 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Aug 30, 2024 8:50:00 AM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Aug 30, 2024 8:50:24 AM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 8:50:24 AM server.connect.Connection run
+INFO: получен запрос "args" from /127.0.0.1:1100
+Aug 30, 2024 8:50:24 AM server.connect.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Aug 30, 2024 8:50:24 AM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 8:50:24 AM server.connect.Connection run
+INFO: получен запрос "users" from /127.0.0.1:1100
+Aug 30, 2024 8:50:24 AM server.connect.Connection run
+FINE: отправлен список пользователей to /127.0.0.1:1100
+Aug 30, 2024 8:51:31 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 30, 2024 8:51:31 AM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 30, 2024 11:53:02 AM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 11:53:02 AM server.Server start
+FINER: THROW
+org.postgresql.util.PSQLException: Connection to localhost:8800 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:191)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:87)
+	at server.Server.main(Server.java:69)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 10 more
+
+Aug 30, 2024 12:08:45 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 12:08:45 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 12:08:45 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 12:08:48 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:08:48 PM server.connect.Connection run
+INFO: получен запрос "args" from /127.0.0.1:1100
+Aug 30, 2024 12:08:48 PM server.connect.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Aug 30, 2024 12:08:48 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:08:48 PM server.connect.Connection run
+INFO: получен запрос "users" from /127.0.0.1:1100
+Aug 30, 2024 12:08:48 PM server.connect.Connection run
+FINE: отправлен список пользователей to /127.0.0.1:1100
+Aug 30, 2024 12:09:06 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:09:06 PM server.connect.Connection run
+INFO: получен запрос "register" from /127.0.0.1:1100
+Aug 30, 2024 12:09:06 PM server.connect.Connection run
+FINE: пользователь from /127.0.0.1:1100 зарегистрирован
+Aug 30, 2024 12:10:07 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:10:07 PM server.connect.Connection run
+INFO: получен запрос "help" from /127.0.0.1:1100
+Aug 30, 2024 12:10:07 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:10:14 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:10:14 PM server.connect.Connection run
+INFO: получен запрос "info" from /127.0.0.1:1100
+Aug 30, 2024 12:10:14 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:10:23 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:10:23 PM server.connect.Connection run
+INFO: получен запрос "show" from /127.0.0.1:1100
+Aug 30, 2024 12:10:23 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:11:12 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:11:13 PM server.connect.Connection run
+INFO: получен запрос "add" from /127.0.0.1:1100
+Aug 30, 2024 12:11:13 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:11:19 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:11:19 PM server.connect.Connection run
+INFO: получен запрос "show" from /127.0.0.1:1100
+Aug 30, 2024 12:11:19 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:11:23 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:11:24 PM server.connect.Connection run
+INFO: получен запрос "help" from /127.0.0.1:1100
+Aug 30, 2024 12:11:24 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:13:21 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:13:21 PM server.connect.Connection run
+INFO: получен запрос "update" from /127.0.0.1:1100
+Aug 30, 2024 12:13:22 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:13:30 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:13:30 PM server.connect.Connection run
+INFO: получен запрос "show" from /127.0.0.1:1100
+Aug 30, 2024 12:13:30 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:40:05 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:40:05 PM server.connect.Connection run
+INFO: получен запрос "help" from /127.0.0.1:1100
+Aug 30, 2024 12:40:05 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:40:11 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:40:11 PM server.connect.Connection run
+INFO: получен запрос "clear" from /127.0.0.1:1100
+Aug 30, 2024 12:40:12 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:40:17 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:40:17 PM server.connect.Connection run
+INFO: получен запрос "show" from /127.0.0.1:1100
+Aug 30, 2024 12:40:17 PM server.connect.Connection run
+FINE: отправлен ответ to /127.0.0.1:1100
+Aug 30, 2024 12:42:32 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 30, 2024 12:42:32 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 30, 2024 12:42:49 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 12:42:50 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 12:42:50 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 12:42:50 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:42:50 PM server.connect.Connection run
+INFO: получен запрос "args" from /127.0.0.1:1100
+Aug 30, 2024 12:42:50 PM server.connect.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Aug 30, 2024 12:42:50 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:42:50 PM server.connect.Connection run
+INFO: получен запрос "users" from /127.0.0.1:1100
+Aug 30, 2024 12:42:50 PM server.connect.Connection run
+FINE: отправлен список пользователей to /127.0.0.1:1100
+Aug 30, 2024 12:43:06 PM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Aug 30, 2024 12:43:06 PM server.connect.Connection run
+INFO: получен запрос "login" from /127.0.0.1:1100
+Aug 30, 2024 12:43:06 PM server.connect.Connection run
+FINE: успешный вход from /127.0.0.1:1100
+Aug 30, 2024 12:43:17 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 30, 2024 12:43:17 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 30, 2024 2:21:04 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 2:21:05 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 2:21:05 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 2:21:11 PM server.Server start
+FINER: THROW
+java.io.StreamCorruptedException: invalid stream header: 47455420
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:989)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:416)
+	at server.connect.Connection.<init>(Connection.java:15)
+	at server.Server.start(Server.java:139)
+	at server.Server.main(Server.java:64)
+
+Aug 30, 2024 3:23:29 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:23:29 PM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:45)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 30, 2024 3:23:55 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:23:55 PM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:45)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 30, 2024 3:26:55 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:26:55 PM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:45)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 30, 2024 3:27:13 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:28:05 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:28:05 PM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:45)
+	at server.Server.start(Server.java:85)
+	at server.Server.main(Server.java:67)
+
+Aug 30, 2024 3:28:51 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:28:51 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:28:51 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:29:15 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:29:16 PM server.Server start
+FINER: THROW
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:259)
+	at java.base/java.util.Properties.load(Properties.java:408)
+	at database.SQLManager.<init>(SQLManager.java:25)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:45)
+	at server.Server.start(Server.java:85)
+	at server.Server.main(Server.java:67)
+
+Aug 30, 2024 3:29:49 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:29:49 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:29:49 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:30:30 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:30:31 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:30:31 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:31:02 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:31:03 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:31:03 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:33:18 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:33:19 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:33:19 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:35:30 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:35:31 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:35:31 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:35:56 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:35:56 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:35:56 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:36:47 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:36:47 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:36:47 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:37:14 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:37:14 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:37:14 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:37:38 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:37:39 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:37:39 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:37:56 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:37:56 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:37:56 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:37:59 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:38:00 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:38:00 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:38:06 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:38:06 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:38:06 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:38:52 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:38:52 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:38:52 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:39:16 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:39:16 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:39:16 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:43:49 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:43:49 PM server.Server start
+FINE: коллекция получена
+Aug 30, 2024 3:43:49 PM server.Server start
+FINE: сервер запущен
+Aug 30, 2024 3:45:03 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:49:22 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:49:58 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:50:03 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:50:16 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:50:54 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:51:09 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:51:35 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:51:58 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:52:00 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:52:10 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:52:31 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:52:56 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:54:42 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:55:09 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:55:33 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:55:47 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:55:58 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:56:12 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 3:56:43 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 4:50:25 PM server.Server main
+INFO: запуск сервера
+Aug 30, 2024 4:53:07 PM server.Server main
+INFO: запуск сервера

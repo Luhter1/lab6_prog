@@ -1,7 +1,9 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
+import java.io.IOException;
+import java.sql.SQLException;
 
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на вывод значения цен в порядке убывания и привязывает его к получателю, вызывая соответствующую операцию на получателе.
@@ -16,7 +18,7 @@ public class PrintFieldDescendingPrice implements BaseCommand{
      * @param args название команды и параметры для нее
      * @exception LackOfDataException вызывается при недостатке аргументов для команды
     */   
-    public String execute(Package pack, VectorCollection collection){
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
         return VectorCollection.PrintFieldDescendingPrice();
     }
 

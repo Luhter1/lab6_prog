@@ -1,7 +1,7 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
 
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на выход без сохранения коллекции в файл и привязывает его к получателю, вызывая соответствующую операцию на получателе.
@@ -17,7 +17,6 @@ public class ExitServerCommand implements BaseCommand{
      * @exception LackOfDataException вызывается при недостатке аргументов для команды
     */
     public String execute(Package pack, VectorCollection collection){
-        VectorCollection.Save();
         VectorCollection.exit();  
         return ""; 
     }

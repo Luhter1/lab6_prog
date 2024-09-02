@@ -1,6 +1,7 @@
 package data.coordinates;
 
 import java.io.Serializable;
+
 /** 
  * Класс, задающий структуру для значений данного типа.
  * @author Timofei Kaparulin
@@ -34,15 +35,13 @@ public class Coordinates implements Serializable{
         this.y = Double.parseDouble(y);
     }
 
-    /** 
-     * Возвращает строковое представление обьекта данного класса, для его записи в файл-коллекцию.
-     * @return строковое представление обьекта для записи в файл-коллекцию
-     *
-     * @see receiver.VectorCollection#Save()                       
-     */
-    public String toWrite(){
-        return x+";"+y;
-    }
+	public double x(){
+		return x;
+	}
+	
+	public double y(){
+		return y;
+	}
 
     @Override
     public String toString(){

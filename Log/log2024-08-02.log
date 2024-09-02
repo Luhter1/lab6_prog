@@ -1,0 +1,84 @@
+Aug 02, 2024 1:46:27 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 1:46:27 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 1:51:13 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 1:51:13 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 2:06:33 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 2:06:34 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 2:08:42 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 2:08:42 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 2:10:27 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 2:10:27 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 2:10:30 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 2:10:30 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 02, 2024 2:10:36 AM server.Server main
+INFO: запуск сервера
+Aug 02, 2024 2:10:36 AM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+

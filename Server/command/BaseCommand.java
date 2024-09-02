@@ -1,7 +1,9 @@
 package command;
 
-import pack.Package;
+import server.connect.Package;
 import receiver.VectorCollection;
+import java.sql.SQLException;
+import java.io.IOException;
 /** 
  * Интерфейс, который определяет метод, необходимый для выполнения команды.
  * 
@@ -14,7 +16,7 @@ public interface BaseCommand{
      * @param args название команды и параметры для нее
      * @exception LackOfDataException вызывается при недостатке аргументов для команды
     */
-    public String execute(Package pack, VectorCollection collection);
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException;
 
     /**
      * Возвращает строковое представление команды для команды {@link command.ShowCommand}

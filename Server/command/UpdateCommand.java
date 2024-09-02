@@ -1,9 +1,10 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
+import java.io.IOException;
 import data.ticket.Ticket;
-
+import java.sql.SQLException;
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на обновление значения обьекта коллекции по его id и привязывает его к получателю, вызывая соответствующую операцию на получателе.
  * 
@@ -17,8 +18,8 @@ public class UpdateCommand implements BaseCommand{
      * @param args название команды и параметры для нее
      * @exception LackOfDataException вызывается при недостатке аргументов для команды
     */        
-    public String execute(Package pack, VectorCollection collection){
-        return VectorCollection.update((Ticket)pack.arg());
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
+        return VectorCollection.update((Ticket)pack.arg(), (String)pack.login());
     }
 
     @Override

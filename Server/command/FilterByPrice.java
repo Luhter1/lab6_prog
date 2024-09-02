@@ -1,8 +1,9 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
-
+import server.connect.Package;
+import java.io.IOException;
+import java.sql.SQLException;
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на вывод обьектов с указанной ценой и привязывает его к получателю, вызывая соответствующую операцию на получателе.
  * 
@@ -18,8 +19,8 @@ public class FilterByPrice implements BaseCommand{
      * @exception PositiveException не положительное значение цены
      * @exception StringParseException путстое или равное null значение
     */    
-    public String execute(Package pack, VectorCollection collection){
-        return VectorCollection.FilterByPrice((int)pack.arg());
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
+        return VectorCollection.FilterByPrice((Integer)pack.arg());
     }
 
     @Override

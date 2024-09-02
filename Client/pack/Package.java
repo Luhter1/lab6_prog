@@ -1,8 +1,8 @@
-package pack;
+package server.connect;
 
 import java.io.Serializable;
 
-public record Package<T>(String command, T arg) implements Serializable{}
+public record Package<T>(String command, T arg, String login, String pswd) implements Serializable{}
 
 /*
 public class Package<T>{

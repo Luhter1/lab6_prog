@@ -1,0 +1,62 @@
+Sep 02, 2024 12:01:26 AM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 12:01:27 AM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 12:01:27 AM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 12:01:40 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 02, 2024 12:01:40 AM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 02, 2024 12:01:59 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Sep 02, 2024 12:01:59 AM receiver.VectorCollection exit
+FINE: выключение сервера
+Sep 02, 2024 6:13:31 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:13:32 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:13:32 PM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 6:23:31 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:23:32 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:23:32 PM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 6:23:34 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Sep 02, 2024 6:23:34 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Sep 02, 2024 6:35:19 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:35:19 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:35:19 PM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 6:37:11 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Sep 02, 2024 6:37:11 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Sep 02, 2024 6:37:27 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:37:28 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:37:28 PM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 6:37:42 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Sep 02, 2024 6:37:42 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Sep 02, 2024 6:45:11 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:45:11 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:45:11 PM server.Server start
+FINE: сервер запущен
+Sep 02, 2024 6:47:24 PM server.Server main
+INFO: запуск сервера
+Sep 02, 2024 6:47:24 PM server.Server start
+FINE: коллекция получена
+Sep 02, 2024 6:47:24 PM server.Server start
+FINE: сервер запущен

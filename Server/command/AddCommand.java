@@ -1,8 +1,10 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
 import data.ticket.Ticket;
+import java.io.IOException;
+import java.sql.SQLException;
 
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на добавление пользователем нового обьекта в коллекцию и привязывает его к получателю, вызывая соответствующую операцию на получателе.
@@ -16,9 +18,9 @@ public class AddCommand implements BaseCommand{
      * Метод, определяющий операции для выполнения команды по добавлению пользователем нового обьекта
      * @param args название команды и параметры для нее
     */
-    public String execute(Package pack, VectorCollection collection){
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
 
-        return VectorCollection.add((Ticket)pack.arg());
+        return VectorCollection.add((Ticket)pack.arg(), (String)pack.login());
     }
 
 

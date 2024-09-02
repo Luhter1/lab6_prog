@@ -1,0 +1,224 @@
+Aug 03, 2024 3:59:37 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 3:59:37 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 03, 2024 4:01:45 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:01:45 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 03, 2024 4:05:18 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:05:18 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:9999/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 03, 2024 4:05:26 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:05:26 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:9999/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:82)
+	at server.Server.main(Server.java:64)
+
+Aug 03, 2024 4:18:40 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:18:40 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+
+Aug 03, 2024 4:19:45 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:19:45 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+
+Aug 03, 2024 4:20:16 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:20:16 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+
+Aug 03, 2024 4:20:23 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:20:23 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://db:8888/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+
+Aug 03, 2024 4:21:20 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:21:20 PM server.Server start
+FINER: THROW
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:8800/studs
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+
+Aug 03, 2024 4:21:56 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 4:21:57 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 4:21:57 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 8:46:06 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 8:46:06 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 8:46:07 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 8:46:52 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 9:46:52 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 9:46:52 PM server.Server start
+FINER: THROW
+org.postgresql.util.PSQLException: Connection to localhost:8800 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:319)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:190)
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:34)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:261)
+	at server.Server.start(Server.java:88)
+	at server.Server.main(Server.java:70)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 10 more
+
+Aug 03, 2024 9:47:41 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 9:47:42 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 9:47:42 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 9:48:09 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 9:48:09 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 10:07:38 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 10:07:39 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 10:07:39 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 10:07:43 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 10:07:43 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 10:13:51 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 10:13:52 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 10:13:52 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 10:21:11 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 10:21:11 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 10:21:16 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 10:21:17 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 10:21:17 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 10:21:48 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 10:21:48 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 10:21:54 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 10:21:55 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 10:21:55 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 10:21:59 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 10:21:59 PM receiver.VectorCollection exit
+FINE: выключение сервера
+Aug 03, 2024 10:33:18 PM server.Server main
+INFO: запуск сервера
+Aug 03, 2024 10:33:19 PM server.Server start
+FINE: коллекция получена
+Aug 03, 2024 10:33:19 PM server.Server start
+FINE: сервер запущен
+Aug 03, 2024 10:33:27 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: ew
+Aug 03, 2024 10:33:27 PM invoker.CommandManager ServerExecute
+FINER: THROW
+серверная команда "ew" не найдена
+	at invoker.CommandManager.ServerExecute(CommandManager.java:91)
+	at server.Server.start(Server.java:137)
+	at server.Server.main(Server.java:71)
+
+Aug 03, 2024 10:33:37 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: help
+Aug 03, 2024 10:33:37 PM invoker.CommandManager ServerExecute
+FINE: серверная команда выполнена
+Aug 03, 2024 10:33:48 PM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Aug 03, 2024 10:33:48 PM receiver.VectorCollection exit
+FINE: выключение сервера

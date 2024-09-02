@@ -1,9 +1,10 @@
 package command;
 
 import receiver.VectorCollection;
-import pack.Package;
+import server.connect.Package;
 import data.ticket.Ticket;
-
+import java.io.IOException;
+import java.sql.SQLException;
 /** 
  * Реализации интерфейса {@link command.BaseCommand}. Эта конкретная команда инкапсулирует  запрос на добавление пользователем нового обьекта в коллекцию, если его цена больше максимальной в коллекции, и привязывает его к получателю, вызывая соответствующую операцию на получателе.
  * 
@@ -16,8 +17,8 @@ public class AddIfMaxCommand implements BaseCommand{
      * Метод, определяющий операции для выполнения команды по добавлению пользователем нового обьекта, если его цена больше максимальной в коллекции
      * @param args название команды и параметры для нее
     */
-    public String execute(Package pack, VectorCollection collection){
-        return VectorCollection.addIf((Ticket)pack.arg());
+    public String execute(Package pack, VectorCollection collection) throws IOException, SQLException{
+        return VectorCollection.addIf((Ticket)pack.arg(), (String)pack.login());
     }
 
     @Override

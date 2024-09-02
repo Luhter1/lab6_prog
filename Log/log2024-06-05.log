@@ -1,0 +1,34 @@
+Jun 05, 2024 11:49:04 AM server.Server main
+INFO: запуск сервера
+Jun 05, 2024 11:49:04 AM server.Server start
+FINER: THROW
+Ошибка подключения к БД
+	at database.SQLManager.getCollectionFromDatabase(SQLManager.java:92)
+	at receiver.VectorCollection.getCollectionFromDatabase(VectorCollection.java:248)
+	at server.Server.start(Server.java:70)
+	at server.Server.main(Server.java:57)
+
+Jun 05, 2024 11:50:35 AM server.Server main
+INFO: запуск сервера
+Jun 05, 2024 11:50:35 AM server.Server start
+FINE: коллекция получена
+Jun 05, 2024 11:50:35 AM server.Server start
+FINE: сервер запущен
+Jun 05, 2024 11:50:35 AM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 05, 2024 11:50:35 AM server.connect.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
+Jun 05, 2024 11:51:38 AM invoker.CommandManager ServerExecute
+INFO: ввод серверной команды: exit
+Jun 05, 2024 11:51:38 AM receiver.VectorCollection exit
+FINE: выключение сервера
+Jun 05, 2024 11:54:50 AM server.Server main
+INFO: запуск сервера
+Jun 05, 2024 11:54:50 AM server.Server start
+FINE: коллекция получена
+Jun 05, 2024 11:54:50 AM server.Server start
+FINE: сервер запущен
+Jun 05, 2024 11:54:54 AM server.connect.Connection 
+FINE: получено подключение to /127.0.0.1:1100
+Jun 05, 2024 11:54:54 AM server.connect.Connection run
+FINE: отправлены аргументы для комманд to /127.0.0.1:1100
